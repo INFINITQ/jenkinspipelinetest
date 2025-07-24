@@ -18,7 +18,7 @@ pipeline {
     post {
         always {
             echo 'Pipeline finished. Cleaning up...'
-            sh 'docker rmi pipelinetest:v1'
+            sh 'sudo docker rmi pipelinetest:v1'
         }
     }
 }
