@@ -5,13 +5,13 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 echo 'Building the Docker image...'
-                sh 'docker build . -t pipelinetest:v1'
+                sh 'sudo docker build . -t pipelinetest:v1'
             }
         }
         stage('Run Test Container') {
             steps {
                 echo 'Running the container to verify the build...'
-                sh 'docker run --rm pipelinetest:v1'
+                sh 'sudo docker run --rm pipelinetest:v1'
             }
         }
     }
